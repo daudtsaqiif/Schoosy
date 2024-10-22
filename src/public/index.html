@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schoosy</title>
+    <link rel="stylesheet" href="./output.css">
+
+    <!---------- IonIcons ---------->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!---------- Favicon ---------->
+    <link rel="shortcut icon" href="assets/Logo.png" type="image/x-icon">
+</head>
+
+<body class="bg-white font-Nunito font-semibold">
+     <!---------- Header ---------->
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
+            <div>
+                <span class="text-3xl font-semibold font-TitanOne text-main-color">Schoosy</span>
+            </div>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex justify-end md:items-center px-5 -z-10 md:z-0">
+                <ul class="flex md:flex-row items-end flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-main-color duration-300" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-main-color duration-300" href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-main-color duration-300" href="#">Content</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-main-color duration-300" href="#">Pricing</a>
+                    </li>
+                    <div class="md:hidden flex gap-3">
+                        <li class="text-main-color py-2">Sign In</li>
+                        <li
+                            class="bg-main-color text-white px-5 py-2 rounded-xl hover:bg-opacity-70 duration-300">Sign
+                            Up</li>
+                    </div>
+                </ul>
+            </div>
+            <div class=" flex items-center gap-6">
+                <button class="hidden md:block text-main-color">Sign In</button>
+                <button
+                    class="hidden md:block bg-main-color text-white px-5 py-2 rounded-xl hover:bg-opacity-70 duration-300">Sign
+                    Up</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!---------- Home ---------->
+    </main>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[11%]')
+        }
+    </script>
+</body>
+
+</html>
